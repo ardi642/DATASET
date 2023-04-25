@@ -1,4 +1,6 @@
 import puppeteer from "puppeteer-core";
+import * as fs from "fs";
+
 const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const browser = await puppeteer.launch({
   executablePath: chromePath, 
@@ -8,6 +10,5 @@ const browser = await puppeteer.launch({
 });
 
 const wsEndpoint = browser.wsEndpoint();
-const page = await browser.newPage();
-
-export default page;
+// Menulis variabel environment ke file .env
+fs.writeFileSync('.env', `WS_ENDPOINT=${wsEndpoint}`);
