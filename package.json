@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "dotenv": "^16.0.3",
+    "fast-csv": "^4.3.6",
     "puppeteer-core": "^19.8.5"
   }
 }
